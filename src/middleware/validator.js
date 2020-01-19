@@ -1,5 +1,5 @@
-const newUserStruct = ["cordinateLong", "cordinateLat", "client_id",  "username", "address", "phone", "email", "password"];
-const updateUserStruct = ["id", "cordinateLong", "cordinateLat", "client_id",  "address", "phone", "email"];
+const newUserStruct = ["location_id", "client_id",  "username", "address", "phone", "email", "password"];
+const updateUserStruct = ["id", "location_id",  "client_id",  "address", "phone", "email"];
 const passwordData = ["id", "old_password", "new_password"];
 const protected = ['password', 'token'];
 const userLoginData = ['password', 'username'];
