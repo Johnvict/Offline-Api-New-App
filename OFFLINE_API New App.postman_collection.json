@@ -1,0 +1,499 @@
+{
+	"info": {
+		"_postman_id": "9d380959-d2b4-4896-9eb2-dd308e8d0c41",
+		"name": "OFFLINE_API New App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "all",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/user/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"all"
+							]
+						},
+						"description": "Get all clients data"
+					},
+					"response": []
+				},
+				{
+					"name": "one",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/user/one/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"one",
+								"1"
+							]
+						},
+						"description": "Get all clients data"
+					},
+					"response": []
+				},
+				{
+					"name": "check-phone",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/user/check-phone/08108307073",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"check-phone",
+								"08108307073"
+							]
+						},
+						"description": "Get all clients data"
+					},
+					"response": []
+				},
+				{
+					"name": "check-email",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/user/check-email/primedev@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"check-email",
+								"primedev@gmail.com"
+							]
+						},
+						"description": "Get all clients data"
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"location_id\": \"1\",\n\t\"client_id\": \"1\",\n\t\"username\": \"John2\",\n\t\"address\": \"Abuja to Lagos, no 17\",\n\t\"email\": \"john@test.com\",\n\t\"phone\": \"08100100202\",\n\t\"password\": \"123456\"\n}\n"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"create"
+							]
+						},
+						"description": "Get all clients data"
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJqb2huQHRlc3QuY29tIiwiaWF0IjoxNTc5NDM5NDc3LCJleHAiOjE1Nzk1MjU4Nzd9.3mxxAkWk0krrxvQJo0ozJ5yX62jbME8Cf5ho5lqiw8I",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": 1,\n\t\"location_id\": \"1\",\n\t\"client_id\": \"1\",\n\t\"address\": \"Abuja to Lagos, no 66\",\n\t\"email\": \"john@test.com\",\n\t\"phone\": \"08100100202\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"update"
+							]
+						},
+						"description": "Get all clients data"
+					},
+					"response": []
+				},
+				{
+					"name": "update-password",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJqb2huQHRlc3QuY29tIiwiaWF0IjoxNTc5NDQwMDY1LCJleHAiOjE1Nzk1MjY0NjV9.NVvMe7QIfWYL-mLfpMyWP4-exCsG_kiEdTST5EUGgQQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": 1,\n\t\"old_password\": \"654321\",\n\t\"new_password\": \"123456\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/update-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"update-password"
+							]
+						},
+						"description": "Get all clients data"
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/delete/14",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"delete",
+								"14"
+							]
+						},
+						"description": "Get all clients data"
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"john@test.com\",\n\t\"password\": \"123456\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "TransactionLog",
+			"item": [
+				{
+					"name": "all",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/transaction-log/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"transaction-log",
+								"all"
+							]
+						},
+						"description": "Get all clients data"
+					},
+					"response": []
+				},
+				{
+					"name": "one",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/transaction-log/one/askjsdlvkbdhvkbdskh",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"transaction-log",
+								"one",
+								"askjsdlvkbdhvkbdskh"
+							]
+						},
+						"description": "Get all clients data"
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJqb2hudmljdEB0ZXN0LmNvbSIsImlhdCI6MTU3Mjk0NDA3OCwiZXhwIjoxNTczMDMwNDc4fQ.0267Aill5EPMSci7sKTRU2XTRr6wy34fmrEsMB7GXW4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"logs\": [\n\t\t{\n\t\t\t\"token\": \"dafgcvbgfdfxcgfhnmsbns\",\n\t\t\t\"item_class_id\": 1,\n\t\t\t\"item_id\": 1,\n\t\t\t\"item_category_id\": 1,\n\t\t\t\"user_id\": 1,\n\t\t\t\"customer\": \"John Papa\",\n\t\t\t\"qty\": 12,\n\t\t\t\"discount\": 0,\n\t\t\t\"price\": 1459\n\t\t},\n\t\t{\n\t\t\t\"token\": \"dafgcvbgfdfgfhnmsbnab\",\n\t\t\t\"item_class_id\": 1,\n\t\t\t\"item_id\": 1,\n\t\t\t\"item_category_id\": 1,\n\t\t\t\"user_id\": 1,\n\t\t\t\"customer\": \"John Papa\",\n\t\t\t\"qty\": 12,\n\t\t\t\"discount\": 0,\n\t\t\t\"price\": 1459\n\t\t}\n\t]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/transaction-log/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"transaction-log",
+								"create"
+							]
+						},
+						"description": "Get all clients data"
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/item-category/delete/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"item-category",
+								"delete",
+								"3"
+							]
+						},
+						"description": "Get all clients data"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

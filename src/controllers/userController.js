@@ -77,17 +77,19 @@ const createUser = (req, res) => {
 	.catch(e => console.log(e));
 };
 
-const updateUser = (req, res) => {
+const updateUser = async (req, res) => {
 	if (!req.body) return res.status(403).json({message: "user data required"});
 
 	const latestUserData = req.body;
 	const isDataValid = Validator.validator(Validator.updateUserStruct, latestUserData);
 
 	if (isDataValid !== true) return res.status(403).json(isDataValid);
+	const user = await getOneUser(req.body.id);
+	if (!user) return res.status(403).json({status: -1, message: "user not found"});
 	const dataToStore = { address, location_id, phone, email }  = latestUserData;
 	User.update({ ...dataToStore }, {returning: true, where: { id: latestUserData.id }})
-	.then( async (updatedClient) => {
-		return res.status(201).json({
+	.then( async (updatedUser) => {
+		return res.status(200).json({
 			status: 1,
 			data: await getAuthUser(latestUserData.id, latestUserData.client_id).then(Data => Data)
 		});
@@ -121,7 +123,7 @@ const changePassword = async (req, res) => {
 	userPasswordData.new_password = Auth.hashPassword(userPasswordData.new_password);
 	console.log(userPasswordData);
 	User.update({ password: userPasswordData.new_password }, {returning: true, where: { id: userPasswordData.id }})
-	.then( async (updatedClient) => {
+	.then( async (updatedUser) => {
 		const user = await getOneUser(userPasswordData.id);
 		return res.status(201).json({
 			status: 1,
